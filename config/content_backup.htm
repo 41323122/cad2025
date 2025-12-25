@@ -12,3 +12,122 @@
 <p style="padding-left: 60px;">w18: 課程總結</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (40%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得。</p>
 <p style="padding-left: 60px;">w9 期中自評、w18 期末自評</p>
+<h1>個人進度</h1>
+<h2>建立tream</h2>
+<p>建立tream以下為製做過程</p>
+<h4 data-path-to-node="3">1. 環境初始化 (僅需做一次)</h4>
+<p data-path-to-node="4">安裝環境。</p>
+<p data-path-to-node="4"><b data-index-in-node="0" data-path-to-node="5,0,0">           安裝套件：</b> <code data-index-in-node="6" data-path-to-node="5,0,0">./init_replit</code></p>
+<p data-path-to-node="4"><b data-index-in-node="0" data-path-to-node="5,1,0">           預覽網頁：</b> <code data-index-in-node="6" data-path-to-node="5,1,0">python main.py</code></p>
+<p data-path-to-node="4">組員在自己的<b data-index-in-node="12" data-path-to-node="8">分支 (Branch)</b> 上工作，避免直接弄亂主分支 (<code data-index-in-node="39" data-path-to-node="8">main</code>)。</p>
+<ul data-path-to-node="5">
+<li>
+<table data-path-to-node="9">
+<thead>
+<tr>
+<td><strong>動作</strong></td>
+<td><strong>指令</strong></td>
+<td><strong>說明</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-path-to-node="9,1,0,0"><b data-index-in-node="0" data-path-to-node="9,1,0,0">同步進度</b></span></td>
+<td>
+<p data-path-to-node="9,1,1,0"><code data-index-in-node="0" data-path-to-node="9,1,1,0">git checkout main</code></p>
+<br data-path-to-node="9,1,1,1"/>
+<p data-path-to-node="9,1,1,2"><code data-index-in-node="1" data-path-to-node="9,1,1,2">git pull origin main</code></p>
+</td>
+<td><span data-path-to-node="9,1,2,0">開工前，先回主分支抓取大家更新後的成果。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="9,2,0,0"><b data-index-in-node="0" data-path-to-node="9,2,0,0">開啟新任務</b></span></td>
+<td><span data-path-to-node="9,2,1,0"><code data-index-in-node="0" data-path-to-node="9,2,1,0">git checkout -b &lt;分支名&gt;</code></span></td>
+<td><span data-path-to-node="9,2,2,0"><b data-index-in-node="0" data-path-to-node="9,2,2,0">(僅第一次)</b> 建立並切換到你的功能分支。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="9,3,0,0"><b data-index-in-node="0" data-path-to-node="9,3,0,0">切換分支</b></span></td>
+<td><span data-path-to-node="9,3,1,0"><code data-index-in-node="0" data-path-to-node="9,3,1,0">git checkout &lt;分支名&gt;</code></span></td>
+<td><span data-path-to-node="9,3,2,0">後續編輯時，確保自己在正確的分支上。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="9,4,0,0"><b data-index-in-node="0" data-path-to-node="9,4,0,0">檢查狀態</b></span></td>
+<td><span data-path-to-node="9,4,1,0"><code data-index-in-node="0" data-path-to-node="9,4,1,0">git status</code></span></td>
+<td><span data-path-to-node="9,4,2,0">確認哪些檔案被修改了。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="9,5,0,0"><b data-index-in-node="0" data-path-to-node="9,5,0,0">提交紀錄</b></span></td>
+<td>
+<p data-path-to-node="9,5,1,0"><code data-index-in-node="0" data-path-to-node="9,5,1,0">git add .</code></p>
+<br data-path-to-node="9,5,1,1"/>
+<p data-path-to-node="9,5,1,2"><code data-index-in-node="1" data-path-to-node="9,5,1,2">git commit -m "描述你的修改"</code></p>
+</td>
+<td><span data-path-to-node="9,5,2,0">將修改存入本地倉庫。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="9,6,0,0"><b data-index-in-node="0" data-path-to-node="9,6,0,0">推送成果</b></span></td>
+<td><span data-path-to-node="9,6,1,0"><code data-index-in-node="0" data-path-to-node="9,6,1,0">git push -u origin &lt;分支名&gt;</code></span></td>
+<td><span data-path-to-node="9,6,2,0">將你的分支推送到 GitHub，讓組長能看到。</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 data-path-to-node="11">2. 組長：審核與合併流程</h4>
+<p data-path-to-node="12">組長負責將大家的程式碼整合到 <code data-index-in-node="15" data-path-to-node="12">main</code> 分支。</p>
+<table data-path-to-node="13">
+<thead>
+<tr>
+<td><strong>動作</strong></td>
+<td><strong>指令</strong></td>
+<td><strong>說明</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-path-to-node="13,1,0,0"><b data-index-in-node="0" data-path-to-node="13,1,0,0">更新資訊</b></span></td>
+<td><span data-path-to-node="13,1,1,0"><code data-index-in-node="0" data-path-to-node="13,1,1,0">git fetch origin</code></span></td>
+<td><span data-path-to-node="13,1,2,0">抓取雲端所有分支的最新狀態。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="13,2,0,0"><b data-index-in-node="0" data-path-to-node="13,2,0,0">檢查組員進度</b></span></td>
+<td>
+<p data-path-to-node="13,2,1,0"><code data-index-in-node="0" data-path-to-node="13,2,1,0">git branch -a</code></p>
+<br data-path-to-node="13,2,1,1"/>
+<p data-path-to-node="13,2,1,2"><code data-index-in-node="1" data-path-to-node="13,2,1,2">git log --oneline</code></p>
+</td>
+<td><span data-path-to-node="13,2,2,0">查看目前有哪些分支以及提交紀錄。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="13,3,0,0"><b data-index-in-node="0" data-path-to-node="13,3,0,0">比較差異</b></span></td>
+<td><span data-path-to-node="13,3,1,0"><code data-index-in-node="0" data-path-to-node="13,3,1,0">git diff main origin/&lt;組員分支&gt;</code></span></td>
+<td><span data-path-to-node="13,3,2,0">在合併前，先看組員寫了什麼。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="13,4,0,0"><b data-index-in-node="0" data-path-to-node="13,4,0,0">本地測試</b></span></td>
+<td>
+<p data-path-to-node="13,4,1,0"><code data-index-in-node="0" data-path-to-node="13,4,1,0">git checkout &lt;組員分支&gt;</code></p>
+<br data-path-to-node="13,4,1,1"/>
+<p data-path-to-node="13,4,1,2"><code data-index-in-node="1" data-path-to-node="13,4,1,2">python main2.py</code></p>
+</td>
+<td><span data-path-to-node="13,4,2,0">切換到組員的分支並執行，確保網頁跑得起來。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="13,5,0,0"><b data-index-in-node="0" data-path-to-node="13,5,0,0">正式合併</b></span></td>
+<td>
+<p data-path-to-node="13,5,1,0"><code data-index-in-node="0" data-path-to-node="13,5,1,0">git checkout main</code></p>
+<br data-path-to-node="13,5,1,1"/>
+<p data-path-to-node="13,5,1,2"><code data-index-in-node="1" data-path-to-node="13,5,1,2">git merge origin/&lt;組員分支&gt;</code></p>
+</td>
+<td><span data-path-to-node="13,5,2,0">切換回主分支，並把組員的成果合併進來。</span></td>
+</tr>
+<tr>
+<td><span data-path-to-node="13,6,0,0"><b data-index-in-node="0" data-path-to-node="13,6,0,0">同步雲端</b></span></td>
+<td><span data-path-to-node="13,6,1,0"><code data-index-in-node="0" data-path-to-node="13,6,1,0">git push origin main</code></span></td>
+<td><span data-path-to-node="13,6,2,0">將合併後的最終版本推送到雲端。</span></td>
+</tr>
+</tbody>
+</table>
+<p>再來是進到網站編輯前記得git pull origin main拉取最新的資料不然後面合併會看不到東西</p>
+<p>心得</p>
+<p></p>
