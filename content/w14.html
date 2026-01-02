@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='個人進度.html'>個人進度</a><ul class='dropdown'><li><a href='建立tream.html'>建立tream</a><li><a href='w3零件繪製.html'>w3零件繪製</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='個人進度.html'>個人進度</a><ul class='dropdown'><li><a href='建立tream.html'>建立tream</a><li><a href='w3及w7零件繪製.html'>w3及w7零件繪製</a><li><a href='w10.html'>w10</a><li><a href='w14.html'>w14</a><li><a href='w17.html'>w17</a><li><a href='w18.html'>w18</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,15 +142,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">建立tream << <a href='建立tream.html'>Previous</a> <br /><h1>w3零件繪製</h1>
-<p><span>我們這組選擇使用 Onshape 來進行繪製 </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span><span> </span>與<span> </span></span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a><span><span> </span>零組件設計繪圖</span><span>，主要原因是它是一個雲端 CAD 平台，不需要安裝軟體即可透過網頁操作。Onshape 最大的優點是 即時協作，小組成員可以同時在線上編輯同一個檔案，彼此的修改會立即同步，避免了傳統 CAD 軟體需要反覆傳檔、合併的麻煩。這對於團隊合作特別有幫助，因為大家能在同一個工作環境中看到零組件的最新狀態，快速分工並組裝整體模型</span></p>
-<p><span><img alt="" height="450" src="./../images/螢幕擷取畫面 (196).png" width="800"/></span></p>
-<p data-path-to-node="6"></p>
-<p>繪製完成後轉成stl檔記得確認圖的視圖方向</p>
-<p>失敗版<br/><img alt="" height="450" src="./../images/螢幕擷取畫面 (173).png" width="800"/><br/><br/><br/><br/></p>
-<p></p>
-<p></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gu5rRBj-b-4?si=ZAIKPF9o0BwZ8eaa" title="YouTube video player" width="560"></iframe></p><br />建立tream << <a href='建立tream.html'>Previous</a> </div>
+    <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <a href='w17.html'>Next</a> >> w17<br /><h1>w14</h1>
+<p><span>w14: </span><a href="https://cyberbotics.com/">Webots</a><span><span> </span>的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出<span> </span></span><a href="https://cyberbotics.com/">Webots</a><span><span> </span>的場景模型？</span></p>
+<h4 data-path-to-node="1">1. Webots 模型可以用程式方法建立嗎？</h4>
+<p data-path-to-node="2"><b data-index-in-node="0" data-path-to-node="2">可以，主要透過以下兩種方式：</b></p>
+<ul data-path-to-node="3">
+<li>
+<p data-path-to-node="3,0,0"><b data-index-in-node="0" data-path-to-node="3,0,0">使用 PROTO 檔案（參數化建模）：</b> Webots 的 <code data-index-in-node="29" data-path-to-node="3,0,0">PROTO</code> 是一種強大的腳本化節點。你可以撰寫一個 <code data-index-in-node="55" data-path-to-node="3,0,0">.proto</code> 檔案，將機器人的腿長、寬度、馬達參數設為變數。這樣一來，只需更改一個參數，Webots 就會自動重新計算並生成對應的物理模型，非常適合用於 5-bar Linkage 的尺寸優化。</p>
+</li>
+<li>
+<p data-path-to-node="3,1,0"><b data-index-in-node="0" data-path-to-node="3,1,0">動態節點操作（API）：</b> 透過控制程式（Controller），可以使用 Python API（如 <code data-index-in-node="50" data-path-to-node="3,1,0">root_children_field.importMFNodeFromString()</code>）在模擬運行時，動態地「刷」出牆壁、障礙物或零件。</p>
+</li>
+</ul>
+<h4 data-path-to-node="4">2. 能否直接從 CAD 套件轉出 Webots 模型？</h4>
+<p data-path-to-node="5"><b data-index-in-node="0" data-path-to-node="5">可以，這是目前開發 OpenDuck Mini 最推薦的作法：</b></p>
+<ul data-path-to-node="6">
+<li>
+<p data-path-to-node="6,0,0"><b data-index-in-node="0" data-path-to-node="6,0,0">URDF 導出（最常用）：</b> 大多數工業級 CAD（如你使用的 <b data-index-in-node="31" data-path-to-node="6,0,0">Onshape</b>、SolidWorks、Fusion 360）都有開源插件（如 <code data-index-in-node="70" data-path-to-node="6,0,0">onshape-to-robot</code>）。這些插件能將 CAD 中的馬達軸心、零件重心、慣性矩與視覺模型整合，導出為 <b data-index-in-node="126" data-path-to-node="6,0,0">URDF</b> 格式，而 Webots 可以直接匯入 URDF 並自動生成機器人結構。</p>
+</li>
+<li>
+<p data-path-to-node="6,1,0"><b data-index-in-node="0" data-path-to-node="6,1,0">Webots Importer 支援：</b> Webots 內建了多種匯入器，支援將 <b data-index-in-node="40" data-path-to-node="6,1,0">DAE (Collada)</b>、<b data-index-in-node="54" data-path-to-node="6,1,0">OBJ</b> 或 <b data-index-in-node="60" data-path-to-node="6,1,0">VRML</b> 格式轉入。</p>
+<ul data-path-to-node="6,1,1">
+<li>
+<p data-path-to-node="6,1,1,0,0"><b data-index-in-node="0" data-path-to-node="6,1,1,0,0">DAE 格式：</b> 適合保留 CAD 中的精緻視覺外觀。</p>
+</li>
+<li>
+<p data-path-to-node="6,1,1,1,0"><b data-index-in-node="0" data-path-to-node="6,1,1,1,0">STL 格式：</b> 通常用於定義 <code data-index-in-node="15" data-path-to-node="6,1,1,1,0">boundingObject</code>（碰撞體），因為它結構簡單，物理計算效率最高。</p>
+</li>
+</ul>
+</li>
+</ul>
+<br />w10 << <a href='w10.html'>Previous</a> <a href='w17.html'>Next</a> >> w17</div>
         
     <!-- footer -->
       <div class="container">
